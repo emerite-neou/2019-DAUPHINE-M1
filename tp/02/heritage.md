@@ -25,9 +25,9 @@ public class MyClass {
 ```
 
 Vous avez toujours le problème que c'est l'utilisateur qui doit travailler (il doit toujours ajouter this comme argument!)
-1. Comment faire pour qu'une class ait la methode log en temps que class interne
+1. Comment ajouter facilement la method log à une class?
    - *indice: quelle est le nom du tp?*
-2. Implementez et testez votre solution
+2. Implementez et testez votre solution.
 
 
 # Carte du Monde
