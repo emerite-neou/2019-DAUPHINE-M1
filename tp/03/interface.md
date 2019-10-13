@@ -34,12 +34,12 @@ String hi = if (lang == FR) {
 Le but de cet excercice est d'essayer de trouver une solution à ce problème en imitant ce comportement.
 
 ### Création de la class Expression
-1. Créer une class Expression contenant une method if. 
-La method if prend en argument le test et les valeurs à renvoyer.
+1. Créer une class Expression contenant une method expIf. 
+La method expIf prend en argument le test et les valeurs à renvoyer.
 
 Exemple:
 ```
-String hi = new Expression().if(lang == FR, "bonjour", "hi");
+String hi = new Expression().expIf(lang == FR, "bonjour", "hi");
 ```
 
 doit être équivalent à:
@@ -54,26 +54,26 @@ if (lang == FR) {
 ```
 
 2. Pour des raisons de lisibilités (et d'habitude de lecture), on aimerait que le else soit précisé.
-Ajoutez une méthod else. Que doit devenir la signature de if si on veut pouvoir exécuter un else après un appel à if.
+Ajoutez une méthod expElse. Que doit devenir la signature de expIf si on veut pouvoir exécuter un expElse après un appel à expIf.
 
 Exemple:
 ```
 String hi = new Expression()
-  .if(lang == FR, "bonjour")
-  .else("hi");
+  .expIf(lang == FR, "bonjour")
+  .expElse("hi");
 ```
 
-3. Que dois faire le code si l'utilisateur essaie d'appeler la method else avant la method if?
+3. Que dois faire le code si l'utilisateur essaie d'appeler la method expElse avant la method expIf?
 
-4. Ajouter la method elseIf. Assurez-vous que l'utilisateur soit obligé d'utiliser votre code manière cohérente.
+4. Ajouter la method expElseIf. Assurez-vous que l'utilisateur soit obligé d'utiliser votre code manière cohérente.
 
 Exemple:
 ```
 String hi = new Expression()
-  .if(lang == FR, "bonjour")
-  .elseIf(lang == DE, "guttentag")
-  .elseIf(lang == ES, "hola")
-  .else("hi");
+  .expIf(lang == FR, "bonjour")
+  .expElseIf(lang == DE, "guttentag")
+  .expElseIf(lang == ES, "hola")
+  .expElse("hi");
 ```
 
 ### Optimissation
@@ -85,24 +85,20 @@ On va exploser la class Expression en plusieurs class tel que chaque class indiq
 
 ### Un peu de philosophie
 
-Votre code actuel fonctionne mais il n'est pas parfait:
+Votre code a peut être les problème suivant:
 . Votre code est difficile à prendre en main 
 (chaque fonction renvoie une class différente, il faut aller dans chaque class pour voir ceque fait chaque method).
+. Ou votre class mere n'est jamais instancié (ie elle n'est pas concrete ie ca ne devrait pas être declarer comme une class),
+. Ou vous n'avez pas la relation "Est un" entre la fille et la mere (une canette longue est une canette),
+. Ou le nom de vos class ne sont pas cohérent avec ce que font vos class.
 
-Si vous avez décidé de faire de l'héritage ou pensez faire de l'heritage, il y a de grande chance pour que:
-. Soit votre class mere n'est jamais instancié (ie elle n'est pas concrete ie ca ne devrait pas être declarer comme une class),
-. Soit vous n'avez pas la relation "Est un" entre la fille et la mere (une canette longue est une canette),
-. Soit le nom de vos class ne sont pas cohérent avec ce que font vos class.
-
-Une solution est de créer une interface (pas encore parfaite):
-. L'utilisateur n'a que l'interface à lire pour avoir un resumé de l'ensemble de vos class.
-. Vos class sont consistentes.
+Une solution, pour les éviter, est de d'utiliser une interface (pas encore parfaite).
 
 1. Créer une interface IfExpression avec les methods if, elseIf et else.
 2. Créer une class BeforeIf qui implémente IfExpression, comment implémenter les methods elseIf et else?
 3. Créer une class AfterIf qui implémente IfExpression, comment implémenter la method if?
-4. Pour ne pas implémenter des methods pour qu'elle ne lance qu'une exception (cela complexifie la lecture de code), 
-ajoutez des default methods à votre interface IfExpression.
+4. Certaines de vos méthodes ne lancent qu'une exception, cela complexifie la lecture de votre code et créer de la répétition.
+Ajoutez des default methods à votre interface IfExpression.
 5. Assurez-vous que modificateurs de visibilités soient les plus restrictifs possibles.
 
 # Arbre d'expression
@@ -139,7 +135,8 @@ La méthode parse est naturellement récursive: si l’expression contient encor
 . soit le prochain symbole est un opérateur et il faut appeler parse() 2 fois pour obtenir le fils gauche et le fils droit et les combiner avec l'opérateur pour faire une nouvelle expression.
 
 Votre code contient pas mal de if/else pour faire la différence entre une valeur et une opération.
-On veut s'en débarasser.
+De plus vos instances ne sont pas optimissé, certains champs ne sont jamais utilisés (selon le type de votre noeud).
+On améliorer ca.
 
 1. Comment doivent être déclarer vos class Add, Mult et Val pour que le code suivant fonctionne?
 ```java
@@ -152,8 +149,10 @@ ValorOp mult = new Mult(add, val3);
 ```
 2. Pourquoi l'héritage n'est pas la bonne solution?
 3. Implémentez les class Add, Mult et Val. Dans quelle classe doit-on mettre la méthode parse ? Modifier celle-ci pour qu'elle marche avec les nouvelles classes.
-4. Vos class Add et Mult on beaucoup de code en commun. Refactorisez votre code!
-5. On désire ajouter des opération unaires (sqrt, factoriel, sum). Implémentez les classes nécessaires pour avoir les opérations factorielles (reprenté par un ! dans le parser) et sommes (représenter par un S). 
+
+
+1. Vos class Add et Mult on beaucoup de code en commun. Dans quel type de class doit on mettre le code en commun? Refactorisez votre code!
+2. On désire ajouter des opération unaires (sqrt, factoriel, sum). Implémentez les classes nécessaires pour avoir les opérations factorielles (reprenté par un ! dans le parser) et sommes (représenter par un S). 
 
 
 # Jeu des allumettes
