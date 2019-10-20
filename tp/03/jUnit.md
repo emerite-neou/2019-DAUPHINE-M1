@@ -11,10 +11,12 @@ Vous êtes chargé de créer le jUnit de cette class.
 *Vous avez à votre disposition 
 le jar testMe contient la class SIPIO à tester et toutes ces dépendances
 et à la javadoc des class DauphineSystemFileSystem et SIPIO.
-Vous n'avez PAS acces au code source de la class SIPIO.*
+Vous n'avez PAS acces au code source de la class SIPIO.
+Pour avoir acces à la javadoc, téléchargé le fichier javadoc.zip puis le décomprésser.
+*
 
 1. En utilisant la javadoc, trouvez les methods que vous devez tester et ce qu'elles doivent faire.
-2. Instanciez un DauphineSystemFileSystem et essayez de créer un fichier. Pouvez -vous tester la class SIPIO?
+2. Instanciez un DauphineSystemFileSystem et essayez de créer un fichier. Pouvez-vous tester la class SIPIO?
 
 
 ### Créer un Mock

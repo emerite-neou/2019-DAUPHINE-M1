@@ -94,7 +94,7 @@ Votre code a peut être les problème suivant:
 
 Une solution, pour les éviter, est de d'utiliser une interface (pas encore parfaite).
 
-1. Créer une interface IfExpression avec les methods if, elseIf et else.
+1. Créer une interface IfExpression avec les methods expIf, expElseIf et expElse.
 2. Créer une class BeforeIf qui implémente IfExpression, comment implémenter les methods elseIf et else?
 3. Créer une class AfterIf qui implémente IfExpression, comment implémenter la method if?
 4. Certaines de vos méthodes ne lancent qu'une exception, cela complexifie la lecture de votre code et créer de la répétition.
