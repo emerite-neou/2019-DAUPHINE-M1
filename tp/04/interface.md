@@ -129,7 +129,7 @@ Quelle pratique peut-on utiliser pour éviter ce problème? Implémentez la.
 3. Arrangez-vous pour que si on passe un ValOrOp à un println, alors le calcul s'affiche.
    - *Pensez à ajouter des paranthèses*
 4. Créer la méthod eval() qui renvoie la valeur du calcul représenté par le ValOrOp.
-5. Écrire une méthode parse qui prend un Scanner en entrée et crée l'arbre d'expression correspondant sachant que l'arbre sera donné au scanner en utilisant la notation polonaise inverse. Par exemple `(1+2)*3` devient `* + 1 2 3`.
+5. Écrire une méthode parse qui prend un String en entrée et crée l'arbre d'expression correspondant sachant que l'arbre sera donné au scanner en utilisant la notation polonaise inverse. Par exemple `(1+2)*3` devient `* + 1 2 3`.
 La méthode parse est naturellement récursive: si l’expression contient encore des symboles (et qu'elle est bien formée) alors:
 . soit le prochain symbole est un entier et il suffit d'en faire une feuille de l’arbre d'expression,
 . soit le prochain symbole est un opérateur et il faut appeler parse() 2 fois pour obtenir le fils gauche et le fils droit et les combiner avec l'opérateur pour faire une nouvelle expression.
