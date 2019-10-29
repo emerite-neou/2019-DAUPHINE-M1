@@ -13,7 +13,7 @@ On souhaite maintenant faire le jUnit associé. Problème la method est private 
 *copier/coller d'un tp de UPEMLV http://www-igm.univ-mlv.fr/ens/Master/M1/2018-2019/JavaAvance/td13.php*
 
 On souhaite écrire un code qui permet d'afficher un objet au format JSON, par exemple pour la classe Person:
-'''java
+```java
 public static String toJSON(Person person) {
     return
         "{\n" +
@@ -21,7 +21,7 @@ public static String toJSON(Person person) {
         "  \"lastName\": \"" + person.getLastName() + "\"\n" +
         "}\n";
 }
-'''
+```
 Mais supposons que nous ayons envie d'écrire un méthode toJSON qui prend en paramètre un Alien et qui fait la même chose, 
 nous allons dupliquer du code.
 Pour éviter l'hécatombe, on se propose d'écrire une seule méthode toJSON prenant un Object en paramètre et utilisant la réflexion (reflection en anglais) pour trouver les propriétés à écrire au format JSON.
