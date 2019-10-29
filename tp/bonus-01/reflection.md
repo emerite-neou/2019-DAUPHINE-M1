@@ -8,6 +8,20 @@ On souhaite maintenant faire le jUnit associé. Problème la method est private 
 2. Récupérer votre method précédement créer. Comment l'exécuter? Testez. Quelle est le problème
 3. Comment changer le visibilité de la method? Changez la puis écrivez vos tests.
 
+# jUnit3
+
+*recupérez les fichiers SIPIO.java et DauphineSystemFileSystem.java*
+
+Le but est le même que le premier tp sur les jUnit: testez la class SIPIO.java. 
+Problème, votre collegue à modifié le code et n'utilise pas d'injection de dépendance!
+Vous n'avez évidement pas le droit de modifier la class SIPIO.java
+et DauphineSystemFileSystem.java.
+
+La stratégie est la même. Il faut utiliser un Mock, 
+le soucis est qu'il n'y a pas de setter pour le champs qu'on aimerait affecter.
+En utilisant la reflection, arrangez vous pour que la class SIPIO utilise votre DauphineSystemFileSystemMock.
+
+
 # toJSon
 
 *copier/coller d'un tp de UPEMLV http://www-igm.univ-mlv.fr/ens/Master/M1/2018-2019/JavaAvance/td13.php*
