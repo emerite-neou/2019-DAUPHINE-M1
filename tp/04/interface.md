@@ -115,8 +115,8 @@ Exemple :
 peut être représenté par par l'arbre d'expression
    *
  +  \
-/ \  \
-1 2  3
+/ \  3
+1 2  
 ```
 
 Le but de cet excercice est de créer une App utilisant ces objets.
@@ -165,8 +165,8 @@ Le but est d'obliger son adversaire à retirer la dernière allumette.
 Vous devez codez un programme qui permet de jouer à ce jeux (avec un affichage sur terminale).
 De plus on vous demande de créer deux IA (une IA qui tire au hasard un nombre et une seconde qui suit la stratégie gagnante)
 Votre programme prendra 3 arguments:
-Le premier correspond au nombre de dépard d'allumettes, 
+Le premier correspond au nombre de départ d'allumettes, 
 le second et le troisième le type du joueur (humain, ia1 ou ia2)
 
 - *On considere que le programme est toujours lancé correctement (pas besoin de faire des vérifications sur les arguments)*
-- *La stratégie gagnante consite a laisser à l'adversaire un nombre n d'allumette tel que (n-1)%4==0* 
+- *La stratégie gagnante consite a laisser à l'adversaire un nombre n d'allumettes tel que (n-1)%4==0* 
