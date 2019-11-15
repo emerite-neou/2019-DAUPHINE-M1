@@ -12,7 +12,7 @@ public interface ValOrOp {
 
     private static ValOrOp createBinOp(String symbol, ValOrOp fg, ValOrOp fd) {
         if ( symbol.equals("+") ) return new Add(fg, fd);
-        if ( symbol.equals("*") ) return new Mult(fg, fd);
+        else if ( symbol.equals("*") ) return new Mult(fg, fd);
         else throw new IllegalArgumentException("Unexpected symbol");
 
     }
