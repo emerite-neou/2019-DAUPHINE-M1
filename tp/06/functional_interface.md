@@ -1,6 +1,6 @@
 Le but de ce TP est de ce familiariser avec les functional interfaces de java les plus courante et de voir quelques design les utilisants.
 
-# Boilerplate - withTime
+# withTime
 
 On veut tester le temps d'éxecution de la method sort de la class Collections.
 
@@ -36,7 +36,7 @@ et une autre method qui l'utilise. Trouvez ces deux functional interfaces.
 
 2. Séparez l'initilisation de la création de la List. Comment passer le constructeur de LinkedList ou ArrayList en argument de method?
 
-# Boilerplate - withResources
+# withResources
 
 Le but de cet excercice est de tester des designs de code utilisant des ressource (une DB, un fichier, une connection à un socket, etc...).
 
