@@ -42,7 +42,7 @@ Le but de cet excercice est de tester des designs de code utilisant des ressourc
 
 ### 1. Version simple
 
-1. Ecrivez une method static qui prend un nom de fichier, qui parse un nombre contenu dans ce fichier et le renvoie. Que se passe-t-il si le fichier n'existe pas? Si le fichier le contient pas un nombre? La ressource doit toujours être fermé à la fin de l'exécution de votre code (avec ou sans erreur).
+1. Ecrivez une method static qui prend un nom de fichier et qui renvoie le nombre de ligne du fichier. Que se passe-t-il si le fichier n'existe pas? Si le fichier le contient pas un nombre? La ressource doit toujours être fermé à la fin de l'exécution de votre code (avec ou sans erreur).
 
 ### 2. Version pour FileReader 
 
