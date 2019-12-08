@@ -35,21 +35,6 @@ public class WithTime {
 		System.out.println(endTime-startTime);
 	}
 	
-	/*
-	public static Function<List<Integer>, List<Integer>> initList(int size, int seed) {
-		return new Function<List<Integer>, List<Integer>>() {
-			@Override
-			public List<Integer> apply(List<Integer> l) {
-				Random random = new Random(seed);
-				for(int i = 0 ; i < size ; ++i) {
-					l.add(random.nextInt());
-				}
-				return l;
-			}
-		};
-	}
-	*/
-	
 	public static Consumer<List<Integer>> listInitialiser(int size, int seed) {
 		return new Consumer<List<Integer>>() {
 			@Override
