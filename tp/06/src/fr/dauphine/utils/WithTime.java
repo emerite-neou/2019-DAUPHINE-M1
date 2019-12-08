@@ -21,16 +21,14 @@ public class WithTime {
 	}
 	
 	public static void withTimeForAlgoOnList(
-		Supplier<List<Integer>> s, 
-		//Function<List<Integer>, List<Integer>> f,
-		Consumer<List<Integer>> change,
-		Consumer<List<Integer>> c
+		Supplier<List<Integer>> createList, 
+		Consumer<List<Integer>> initlist,
+		Consumer<List<Integer>> runAlgo
 	) {
-		//l = f.apply(l);
-		List<Integer> l = s.get();
-		change.accept(l);
+		List<Integer> l = createList.get();
+		initlist.accept(l);
 		long startTime = System.nanoTime();
-		c.accept(l);
+		runAlgo.accept(l);
 		long endTime = System.nanoTime();
 		System.out.println(endTime-startTime);
 	}
