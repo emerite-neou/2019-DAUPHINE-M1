@@ -32,9 +32,7 @@ et une autre method qui l'utilise. Trouvez ces deux functional interfaces.
 
 (Bonus)
 
-1. A partir d'un certains nombre d'entiers, en lancant deux fois le même test, les temps d'exécution auront une différence significative, pourquoi? Réglez ce problème.
-
-2. Séparez l'initilisation de la création de la List. Comment passer le constructeur de LinkedList ou ArrayList en argument de method?
+1. Séparez l'initilisation de la création de la List. Comment passer le constructeur de LinkedList ou ArrayList en argument de method?
 
 # withResources
 
