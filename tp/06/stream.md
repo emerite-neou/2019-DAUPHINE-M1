@@ -61,6 +61,14 @@ On souhaite prendre en compte qu'une lettre peut valoir le double de son score
 #### Centroid
 1. A partir d'un stream de Points, calculez le centroid de cet ensemble de point. Le centroid correspond au moyenne des coordonnées.
 
+#### 2-means
+1. Créez une fonction qui prend une liste de points et une liste de deux centres (qui sont aussi des points). 
+Groupez chaque point au centre auquel il est le plus proche, puis calculer le centroid des deux groupes.
+REnvoie une liste contenant les deux centroid
+
+#### k-means
+1. Même question que précédent mais avec une lsite de centre de taille non défini.
+
 
 ####
 1. A partir du stream des distances et en utilisant la method reduce, calculez la somme des distances.
