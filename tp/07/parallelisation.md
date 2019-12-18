@@ -22,7 +22,7 @@ Arrangez-vous pour passer cette partie en parametre d'une method pour géneralis
 #### Pour Commencez avec les Threads
 1. Partez de votre première version pour calculer une somme. 
    - Modifiez votre code pour que la boucle soit faite dans une thread. Comment executer la thread puis attendre la fin de son éxecution?
-   - Quelle est le problème avec votre variable d'accumulation? Comment reglez ce problème?
+   - Quelle est le problème avec votre variable d'accumulation? Comment regler ce problème?
    - Affichez la somme pour vérifier le résultat.
 2. Au lieu de calculer la somme dans une seule thread, utilisez deux threads: 
 une calcul la première moitié et l'autre la second, quand les deux thread ont fini combinez les deux résultats. 
