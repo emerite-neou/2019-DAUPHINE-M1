@@ -29,7 +29,7 @@ Le but de cet exercise est de créer une queue qui permet l'ecriture et la lectu
 
 1. Ecrire la class ThreadSafeQueue, son construteur doit prendre le nombre maximum d'éléments que peut contenir la class. 
 2. Ajoutez la method add qui ajoute un élément à la queue. La method doit lancer une execption si la queue est pleine.
-3. Ajoutez la method remove qui retire un element de la queue et le renvoie. La method doit lancer une execption si la queue est pleine.
+3. Ajoutez la method remove qui retire un element de la queue et le renvoie. La method doit lancer une execption si la queue est vide.
 
 ### Gérer une Queue Pleine en bloquant
 
