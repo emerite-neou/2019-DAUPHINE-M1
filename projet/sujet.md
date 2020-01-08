@@ -1,3 +1,9 @@
+```diff
+- Le projet doit être finit le 05/03/2020 au soir
+- La "correction" des autres projets est à rendre le 09/03/2020 (je transmettrais à chacun les projets que vous devez corriger le 06/03/2020)
+- Notez que je dois rendre les notes finales le 10/03/2020 un retard n'est donc pas possible.
+```
+
 Vous devez créer le socle d'un projet qui vérifie et anonymise des données. 
 Il devra lire et écrire des fichiers au format [CSV](https://fr.wikipedia.org/wiki/Comma-separated_values). 
 MAIS vous devez prendre en compte qu'il devra lire et écrire d'autres formats de données.
@@ -57,6 +63,11 @@ Ce fichier sera au format json, il contiendra une liste d'objets. Chaque objet e
 ]
 ```
 
+### Regles de Vérification Demandé
+- AGE : doit être un nombre entre 0 et 120
+- BE_AN_EMAIL : doit être de la forme XXX@YYY.ZZ
+- BE_AN_DAUPHINE_EMAIL : doit être de la forme XXX@dauphine.eu ou XXX@dauphine.psl.eu ou XXX@@lamsade.dauphine.fr
+
 ### Description des Données à Anonymiser
 Ce fichier sera au format json, il contiendra une liste d'objets. Chaque objet est formé du nom de la colonne et de la regle d'anonymisation.
 ```
@@ -75,6 +86,10 @@ Ce fichier sera au format json, il contiendra une liste d'objets. Chaque objet e
    },
 ]
 ```
+
+### Regles d'Anonymisation Demandé
+- RANDOM_LETTER : chaque lettre doit être remplacé par une autre lettre aléatoire
+- RANDOM_LETTER_FOR_LOCAL_PART : chaque lettre doit être remplacé par une autre lettre aléatoire s'arrête au @ du mail.
 
 ### Le Futur de votre Projet
 Prennez en compte que votre projet devra :
@@ -104,6 +119,7 @@ Ce rapport doit expliqué les avantages et désavantages des differentes structu
 ### Bonus
 - le premier pull request contient une roadmap/backlog qui définie toutes les features que vous comptez ajouter et leurs priorités/ordre de developpement. Pour être pris en compte la roadmap doit être respecté. 
 - Systeme de log. Vous pouvez utiliser une librarire (log4j, etc...)
+- Vos anonymisations sont cohérente avec elles même, ie un mot (au sens informatique) doit toujours être anonymisé de la même manière.
 - Prendre en compte que le projet devra lire/ecrire de très gros fichiers.
 - Prendre en compte que le projet devra lire/ecrire des formats de fichiers qui doivent être comprésser/décomprésser,
 - Prendre en compte que certains format de fichiers sont en mode [colonnes](https://fr.wikipedia.org/wiki/Base_de_donn%C3%A9es_orient%C3%A9e_colonnes)
