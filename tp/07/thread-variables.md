@@ -16,7 +16,7 @@ Le principe est de garder en mémoire cette instanciation et de n'utiliser que c
 
 ### ThreadSafe Lazy Singleton
 
-1. Votre code actuel est-il thread safe? Que se passe-t-il si deux thread éxecute getConnection en même temps pour la première fois?
+1. Rendez votre class thread safe.
 
 
 
