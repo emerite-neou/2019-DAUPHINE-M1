@@ -66,7 +66,7 @@ Ce fichier sera au format json, il contiendra une liste d'objets. Chaque objet e
 ### Regles de Vérification Demandé
 - AGE : doit être un nombre entre 0 et 120
 - BE_AN_EMAIL : doit être de la forme XXX@YYY.ZZ
-- BE_AN_DAUPHINE_EMAIL : doit être de la forme XXX@dauphine.eu ou XXX@dauphine.psl.eu ou XXX@@lamsade.dauphine.fr
+- BE_AN_DAUPHINE_EMAIL : doit être de la forme XXX@dauphine.eu ou XXX@dauphine.psl.eu ou XXX@lamsade.dauphine.fr
 
 ### Description des Données à Anonymiser
 Ce fichier sera au format json, il contiendra une liste d'objets. Chaque objet est formé du nom de la colonne et de la regle d'anonymisation.
