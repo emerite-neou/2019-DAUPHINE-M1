@@ -75,11 +75,7 @@ Ce fichier sera au format json, il contiendra une liste d'objets. Chaque objet e
    { 
       "name":"NOM",
       "changeTo":"RANDOM_LETTER"
-   },   
-   { 
-      "name":"AGE",
-      "changeTo":"SAME"
-   },      
+   },    
    { 
       "name":"EMAIL_PERSO",
       "changeTo":"RANDOM_LETTER_FOR_LOCAL_PART"
