@@ -18,8 +18,6 @@ Le principe est de garder en mémoire cette instanciation et de n'utiliser que c
 
 1. Rendez votre class thread safe.
 
-
-
 # Produceurs/consommateurs
 
 ## Probleme 
@@ -63,3 +61,41 @@ Le but de cet exercise est de créer une queue qui permet l'ecriture et la lectu
 2. Quel est l'avantage d'utiliser les methods await et signal plutot que wait et notify.
 3. Ecrivez une nouvelle class ThreadSafeQueue avec des Locks et des Conditions.
 4. Testez votre code. 
+
+# Exchanger
+On souhaite crée une class thread safe que deux threads peuvent se partager pour échanger deux variables.
+Par exemple le code suivant :
+```java
+Exchanger<String> e = new Exchanger();
+
+new Thread(() -> {
+  try {
+    System.out.println("t1 recoit un cadeau de " + e.exchange("t1"));
+  } catch (InterruptedException e1) {
+    e1.printStackTrace();
+  }
+}).start();
+
+new Thread(() -> {
+  try {
+    System.out.println("t2 recoit un cadeau de " + e.exchange("t2"));
+  } catch (InterruptedException e1) {
+    e1.printStackTrace();
+  }  
+}).start();
+```
+doit afficher 
+```
+t2 recoit un cadeau de t1
+t1 recoit un cadeau de t2
+```
+ou
+```
+t1 recoit un cadeau de t2
+t2 recoit un cadeau de t1
+```
+
+
+1. Créez la class Exchanger. Assurez-vous que la method exchange soit la moins bloquand possible. 
+Pour rendre les choses plus facile la class est a utilisation unique (on ne peut appeler exchange que 2 fois).
+De plus si on exchange le même object la method ne fonctionne pas.
