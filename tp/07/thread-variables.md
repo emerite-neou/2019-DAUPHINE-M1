@@ -96,8 +96,8 @@ t2 recoit un cadeau de t1
 ```
 
 
-1. Créez la class Exchanger. Vous pouvez faire un synchonized sur toute la method.
-2. Assurez-vous que la method exchange soit la moins bloquand possible. 
-3. Que se passe-t-il si on utilise la method plusieurs fois de suite? Et si les deux threads exchange exactement le même objet?
+1. Créez la class Exchanger. Vous pouvez faire un synchonized sur toute la method. 
+Votre class est à utilisation unique ie si 4 thread appelent la method exchange, le fonctionnement est garanti que pour les deux premières.
+2. Modifiez la method exchange pour qu'elle soit la moins bloquante possible. 
 
 
