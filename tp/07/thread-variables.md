@@ -66,7 +66,7 @@ Le but de cet exercise est de créer une queue qui permet l'ecriture et la lectu
 On souhaite crée une class thread safe que deux threads peuvent se partager pour échanger deux variables.
 Par exemple le code suivant :
 ```java
-Exchanger<String> e = new Exchanger();
+Exchanger<String> e = new Exchanger<>();
 
 new Thread(() -> {
   try {
