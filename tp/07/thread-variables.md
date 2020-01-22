@@ -96,6 +96,8 @@ t2 recoit un cadeau de t1
 ```
 
 
-1. Créez la class Exchanger. Assurez-vous que la method exchange soit la moins bloquand possible. 
-Pour rendre les choses plus facile la class est a utilisation unique (on ne peut appeler exchange que 2 fois).
-De plus si on exchange le même object la method ne fonctionne pas.
+1. Créez la class Exchanger. Vous pouvez faire un synchonized sur toute la method.
+2. Assurez-vous que la method exchange soit la moins bloquand possible. 
+3. Que se passe-t-il si on utilise la method plusieurs fois de suite? Et si les deux threads exchange exactement le même objet?
+
+
