@@ -1,4 +1,4 @@
-package fr.dauphine.utils;
+package fr.dauphine.concu;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
@@ -85,6 +85,6 @@ public class Runner {
 		/* CREATE THE CONSOMMERS */
 		new Thread(getConsumer(buffer, "c1", 1000)).start();
 		new Thread(getConsumer2(buffer, "c2", 1000)).start();
-		new Thread(new Consommer(buffer, "c3", 1500)).start();
+		new Thread(new Consummer(buffer, "c3", 1500)).start();
 	}
 }
