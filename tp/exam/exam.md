@@ -68,7 +68,7 @@ Ecrivez une method qui prend un Stream de Consultant : 
 Crée une class thread safe SlowVal qui permet à une thread d'initialisé un String et à d'autres de récupérer cette variables.
 Par exemple:
 ```java
-SlowVal<String> s = new Stream<>();
+SlowVal<String> s = new SlowVal<>();
 
 new Thread(() ->  {
   s.set("coucou");
