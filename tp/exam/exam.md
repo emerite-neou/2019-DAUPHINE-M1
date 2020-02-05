@@ -46,7 +46,7 @@ public T collect(T identity, BinaryOperator<T> accumulator, BinaryOperator<T> co
 }
 ```
 Quelle est le problème avec la variable identity? 
-Comment le résoudre? Modifiez le code de la question précédente avec votre solution?
+Comment le résoudre? Modifiez le code de la question précédente avec votre solution.
 - *Si vous pensez n'avoir pas de problème indiquez le*
 
 # Manipulation de Stream
