@@ -152,13 +152,20 @@ public T collect(T identity, BiConsumer<T,T> accumulator) {
 public T collect(T identity, BinaryOperator<T> accumulator, BinaryOperator<T> combiner) {
     this.stream
       .split()
-      .map(subStream -> subStream.reduce(T, accumulator))
+      .map(subStream -> subStream.reduce(identity, accumulator))
       // then combine
 }
 ```
 Quelle est le problème avec la variable identity? 
 ```
 la variable identity est modifié, donc apres le calcul du premier split les caculs ne sont plus bon.
+
+le code de collect peut être derouler de la manirere suivante 
+splits = this.stream.split()
+splits[0].reduce(identity, accumulator)
+// ici la valeur identity n'est plus forcement la même qu'au debut de la method 
+// car splits[0].reduce(identity, accumulator) l a  p-e modifie
+splits[1].reduce(identity, accumulator)
 ```
 
 Comment le résoudre? Modifiez le code de la question précédente avec votre solution.
