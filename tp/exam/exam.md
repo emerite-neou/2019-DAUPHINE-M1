@@ -231,11 +231,11 @@ SlowVal<String> s = new SlowVal<>();
 
 new Thread(() ->  {
   s.set("coucou");
-}).run();
+}).start();
 
 new Thread(() ->  {
   System.out.println(s.get());
-}).run();
+}).start();
 ```
 la method get doit être bloquante tant que la method set n'a pas été appelé. Les methods doivent être le moins bloquant possible.
 ```java
