@@ -278,9 +278,9 @@ public class SlowVal {
 	
 	
 	public void set(String val) {
-		if ( val == null ) {
+		if ( this.val == null ) {
 			lock.lock();
-			if ( val != null ) throw new IllegalStateException();
+			if ( this.val != null ) throw new IllegalStateException();
 			this.val = val;
 			isSet.notify();
 			lock.unlock();
@@ -290,9 +290,9 @@ public class SlowVal {
 	}
 
 	public String get() throws InterruptedException {
-		if ( val == null ) {
+		if ( this.val == null ) {
 			lock.lock();
-			while(val == null) isSet.wait();
+			while(this.val == null) isSet.wait();
 			lock.unlock();
 		}
 		return val;
